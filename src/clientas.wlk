@@ -1,17 +1,19 @@
 object ludmila {
-     method precioPorKilometro() {
+    method precioPorKilometro() {
 		return 18
-	 }
+	}
+
 }
 
 object anaMaria {
 var estable = true
-     method precioPorKilometro() {
+
+	method precioPorKilometro() {
 		if (estable) {
 			return 30
-		  } else {
+		} else {
 			return 25
-		         }
+		}
 	}
 
 	method esEstable() {
@@ -25,7 +27,8 @@ var estable = true
 
 object teresa {
 var valor = 22
-    method precioPorKilometro() {
+
+	method precioPorKilometro() {
 		return valor
 	}
 
@@ -33,13 +36,8 @@ var valor = 22
 		valor = valorNuevo
 	}
 }
-
-object melina{
-var clienta
-    method trabajaPara(clientas){
-    	clienta = clientas
-    } 
-	method precioPorKilometro(){
-		return (clienta.precioPorKilometro - 3)
+object melina {
+    method precioPorKilometro(clienta) {
+		return (clienta.precioPorKilometro() - 3)
 	}
 }
